@@ -1,40 +1,24 @@
-  .maindiv {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .onlyserisname {
-    margin-bottom: 10px;
-    display: flex;
-    /*flex-wrap: wrap;*/
-    /*gap: 14px;*/
-    font-size: 25px;
-    align-items: center;
-  }
+.onlyserisname {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 25px;
+}
 
-  .seatdiv {
-    font-size: 20px;
-    display: initial;
-    margin: 0px 10px 0px 0px;
-    /* Add 3px right margin */
-    padding: 15px 20px;
-    background-color: lightgray;
-    border-radius: 5px;
-  }
-
-  /* CSS styles for the selected seats */
-  .seatdiv.selected {
-    background-color: #ff0000; /* Change the background color to red */
-    color: #ffffff;
-
-  }
-
-  .total-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-  }
-
-
+.seatdiv {
+  font-size: 20px;
+  display: initial;
+  margin-top: 5px;
+  margin-right: 3px;
+  /* Add 3px right margin */
+  padding: 15px 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
