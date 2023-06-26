@@ -22,3 +22,158 @@
   background-color: lightgray;
   border-radius: 5px;
 }
+
+  /* CSS styles for the selected seats */
+  .seatdiv.selected {
+    background-color: #ff0000; /* Change the background color to red */
+    color: #ffffff;
+
+  }
+
+  .total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+
+  .bookticit {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tickitbtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .tickitbtn:hover {
+    background-color: #45a049;
+  }
+
+  .tickitbtn:focus {
+    outline: none;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .submitbtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .submitbtn:hover {
+    background-color: #45a049;
+  }
+
+  .submitbtn:focus {
+    outline: none;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    margin-top: 9px;
+    display: flex;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  #keep-mounted-modal-description {
+    margin-top: 10px;
+  }
+
+
+
+  #keep-mounted-modal-description{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .error-message{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    color: red;
+  }
+
+  /*#outlined-basic{*/
+  /*  padding: 10px;*/
+  /*}*/
+  .seatdiv.booked {
+    background-color: #535353;
+    color: white;
+  cursor: not-allowed;
+    /*color: white;*/
+    /* Styles for booked seats */
+  }
+
+  .clockmange{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+  }
+
+  .backbutton {
+    margin: 10px;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+
+  .backbutton:hover {
+    background-color: #f0f0f0;
+  }
+
+
+
+  .backbutton:focus {
+    outline: none;
+  }
+
+  .backbutton .MuiSvgIcon-root {
+    margin: auto;
+  }
+
+
+
+
