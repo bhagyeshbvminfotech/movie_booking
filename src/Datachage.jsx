@@ -29,16 +29,7 @@
               id: key,
               ...data[key],
             }));
-            const a=[
-              {
-                id: 1,
-                sets: []
-              },
-              {
-                id: 2,
-                sets: []
-              },
-            ]
+
             // Filter data based on movie name and ID
             const filteredData = parsedData.filter((item) => item.movieName === moviename[2] && item.movieId === moviename[3]);
 
