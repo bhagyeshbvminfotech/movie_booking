@@ -91,7 +91,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    gap: 7px;
+    gap: 4px;
     flex-wrap: wrap;
   }
 
@@ -129,5 +129,52 @@
   /*#outlined-basic{*/
   /*  padding: 10px;*/
   /*}*/
+  .seatdiv.booked {
+    background-color: #535353;
+    color: white;
+  cursor: not-allowed;
+    /*color: white;*/
+    /* Styles for booked seats */
+  }
+
+  .clockmange{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+  }
+
+  .backbutton {
+    margin: 10px;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+
+  .backbutton:hover {
+    background-color: #f0f0f0;
+  }
+
+
+
+  .backbutton:focus {
+    outline: none;
+  }
+
+  .backbutton .MuiSvgIcon-root {
+    margin: auto;
+  }
+
+
 
 
