@@ -23,9 +23,7 @@ function Poster() {
             });
     }, []);
 
-    // const moviehandele = (movieName) => {
-    //     console.log("Ticket booking for", movieName);
-    // };
+
 
     return (
         <div className="App">

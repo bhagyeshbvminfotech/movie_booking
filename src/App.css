@@ -176,5 +176,210 @@
   }
 
 
+  .maintwo {
+    margin-top: 152px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .onlyall {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+
+  .inputall {
+    width: 245px;
+  }
+
+  .loginmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .maintwo {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  .tdiv {
+    margin-bottom: 20px;
+  }
+
+  .onlyall h2 {
+    text-align: center;
+    font-family: sans-serif;
+    color: #145585;
+  }
+
+  .twodiv label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    color: #145585;
+  }
+
+  .inputall {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #145585;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #0f486b;
+  }
+
+  .onlyall p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .onlyall p a {
+    color: #145585;
+    text-decoration: none;
+  }
+
+  .onlyall p a:hover {
+    text-decoration: underline;
+  }
+
+
+
+  .signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .signup h2 {
+    text-align: center;
+    font-family: sans-serif;
+    color: #145585;
+    margin-bottom: 20px;
+  }
+
+  .signup form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  .signup form div {
+    margin-bottom: 20px;
+  }
+
+  .signup form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    color: #145585;
+  }
+
+  .signup form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .signup form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #145585;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .signup form button:hover {
+    background-color: #0f486b;
+  }
+
+  .signup p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .signup p a {
+    color: #145585;
+    text-decoration: none;
+  }
+
+  .signup p a:hover {
+    text-decoration: underline;
+  }
+
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .card-title {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #145585;
+  }
+
+  .card-content {
+    margin-top: 20px;
+  }
+
+  .card-link {
+    display: block;
+    text-align: center;
+    color: #145585;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .card-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #145585;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .card-button:hover {
+    background-color: #0f466e;
+  }
+
+  .card p {
+    margin-bottom: 10px;
+  }
+
+  .card p:last-child {
+    margin-bottom: 0;
+  }
+
 
 
