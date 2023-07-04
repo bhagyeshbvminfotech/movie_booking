@@ -18,12 +18,16 @@
     font-size: 20px;
     display: initial;
     margin: 0px 10px 0px 0px;
-    /* Add 3px right margin */
-    padding: 15px 20px;
+    height: 40px;
+    width: 42px;
     background-color: lightgray;
     border-radius: 5px;
   }
 
+
+.hidden{
+  visibility: hidden;
+}
   /* CSS styles for the selected seats */
   .seatdiv.selected {
     background-color: #ff0000; /* Change the background color to red */
@@ -382,4 +386,102 @@
   }
 
 
+  /* CSS for User Profile */
+  .user-profile {
+margin: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .user-profile img {
+    border-radius: 15px;
+    background-color: #535353;
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-profile p {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /*.moviename{*/
+  /*  !*padding-top: 20px;*!*/
+  /*  background-color: bisque;*/
+  /*  display: flex;*/
+  /*  justify-content: space-between;*/
+  /*  align-content: stretch;*/
+  /*  flex-direction: row;*/
+  /*  align-items: center;*/
+  /*  display: flex;*/
+  /*  justifyContent: space-between;*/
+  /*  !*padding-bottom: 20px;*!*/
+  /*  height: 95px;*/
+
+  /*}*/
+
+  .usercompo{
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    height: 95px;
+    margin-bottom: 22px;
+    align-content: stretch;
+    align-items: center;
+  }
+
+
+
+
+  .signup-link {
+    display: block;
+    margin-bottom: 16px;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .login-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .login-btn:hover {
+    background-color: #45a049;
+  }
+
+
+  .signup-link {
+    display: block;
+    margin-bottom: 16px;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .login-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .login-btn:hover {
+    background-color: #45a049;
+  }
+
+
+  .loginmange{
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+  }
 

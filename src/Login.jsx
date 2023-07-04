@@ -1,5 +1,3 @@
-// Login.js
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -36,8 +34,6 @@ const Login = () => {
                 navigate(moviesURL);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
                 alert("Invalid credentials. Please try again.");
             });
 

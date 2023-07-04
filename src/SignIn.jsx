@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebaseConfig";
-import {moviesURL} from "./constant"; // Assuming you have exported the 'auth' object from the firebaseConfig module
+import {moviesURL} from "./constant";
+import User from "./User";
 
 const SignUp = () => {
     const [formData, setFormData] = useState({

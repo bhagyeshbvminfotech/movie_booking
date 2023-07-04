@@ -8,21 +8,23 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import {moviesURL} from "./constant";
 import { useNavigate } from 'react-router-dom';
+import User from "./User";
+import Sithide from "./Sithide";
 
-const Datachage = () => {
+const MovieSit = () => {
   const [hoveredSeat, setHoveredSeat] = useState(null);
   const [checksitid, setchecksitid] = useState(null);
   const [date, setdate] = useState(null);
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
   const [olddata, setOldData] = useState([]);
-  const [anchorEl, setAnchorEl] = useState(null); // New state for the popover
+  const [anchorEl, setAnchorEl] = useState(null);
   const location = useLocation();
   const movie = location.pathname;
   const moviename = movie.split('/');
 
 
-
+  console.log(Sithide)
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -66,7 +68,7 @@ const Datachage = () => {
 
     setErrorMessage('');
     setHoveredSeat(null);
-    setAnchorEl(null); // Reset the anchor element
+    setAnchorEl(null);
   };
 
   const totalPrice = selectedSeats.reduce((total, seatId) => {
@@ -80,8 +82,7 @@ const Datachage = () => {
 
   const navigate = useNavigate();
   const revivalBack = () => {
-    window.history.back();
-    // navigate(`${moviesURL}/${moviename[0]}/${moviename[1]}`);
+    navigate(`${moviesURL}/${moviename[0]}${moviename[2]}`);
   };
 
   const handleSeatHover = (serisname, seatIndex, event) => {
@@ -105,7 +106,10 @@ const Datachage = () => {
 
   return (
       <div>
-        <ArrowBackIcon className="backbutton" onClick={revivalBack} />
+        <div className="usercompo">
+          <ArrowBackIcon className="backbutton" onClick={revivalBack}/>
+          <User/>
+        </div>
         <div className="maindiv">
           {movieList.map((movie, index) => (
               <div key={index} className="onlyserisname">
@@ -122,6 +126,7 @@ const Datachage = () => {
 
                 {[...Array(movie.seat)].map((_, seatIndex) => {
                   const seatId = `${movie.serisname}-${seatIndex + 1}`;
+                  const isSeatHidden = Sithide.includes(seatId);
 
                   const isSeatBooked = booksit.includes(seatId);
                   const isSeatSelected = selectedSeats.includes(seatId);
@@ -132,6 +137,9 @@ const Datachage = () => {
                   }
                   if (isSeatSelected) {
                     seatClassName += ' selected';
+                  }
+                  if (isSeatHidden) {
+                    seatClassName += ' hidden';
                   }
 
                   return (
@@ -180,4 +188,4 @@ const Datachage = () => {
   );
 };
 
-export default Datachage;
+export default MovieSit;

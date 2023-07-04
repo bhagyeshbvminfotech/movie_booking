@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Movieposter.css";
+import "./MovieName.css";
 import { Link } from "react-router-dom";
 import {moviesURL} from "./constant";
+import User from "./User";
 
 
 
-function Poster() {
+function MovieName() {
     const [movieData, setMovieData] = useState([]);
 
 
@@ -27,7 +28,8 @@ function Poster() {
 
     return (
         <div className="App">
-            <h1>Movie Name</h1>
+            <h1 className="usercompo"  >Movie Name<User/></h1>
+
             <div className="poster-container">
                 {movieData.map((movie) => (
                     <Link
@@ -57,4 +59,4 @@ function Poster() {
     );
 }
 
-export default Poster;
+export default MovieName;

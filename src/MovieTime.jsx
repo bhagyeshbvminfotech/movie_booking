@@ -3,11 +3,12 @@ import axios from "axios";
 import { moviesURL } from "./constant";
 import { Link, useLocation } from "react-router-dom";
 import "./clockcard.css";
-
+import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import User from "./User";
 
 
-const ClockData = () => {
+const MovieTime = () => {
     const [timedata1, setTimedata1] = useState([]);
     const location = useLocation();
     const movie= location.pathname;
@@ -28,13 +29,17 @@ const ClockData = () => {
     }, []);
 
 
-
+    const navigate = useNavigate();
     const revivalBack = () => {
-        window.history.back();
+        navigate(`${moviesURL}`);
     };
     return (
         <>
-        <ArrowBackIcon className="backbutton" onClick={revivalBack}/>
+            <div className="usercompo">
+                <ArrowBackIcon className="backbutton" onClick={revivalBack}/>
+                <User/>
+            </div>
+
         <div className="clockmange">
 
             {timedata1.map((time, index) => (
@@ -74,4 +79,4 @@ const ClockData = () => {
     );
 };
 
-export default ClockData;
+export default MovieTime;
