@@ -82,6 +82,11 @@ select {
     cursor: pointer;
 }
 
+.weekend.holiday {
+    color: red;
+}
+
+
 table{
     margin-top: 30px;
     width: 100%;

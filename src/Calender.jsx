@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import moment from 'moment';
 import SearchIcon from '@mui/icons-material/Search';
 import './Cal.css';
@@ -27,6 +27,7 @@ const Calendar = () => {
     const [selectedMonth, setSelectedMonth] = useState(moment().month() + 1);
     const [selectedYear, setSelectedYear] = useState(currentYear);
     const [showResult, setShowResult] = useState(false);
+    const [totalWorkingDays, setTotalWorkingDays] = useState(0);
 
     const handleSearch = () => {
         setShowResult(true);
@@ -54,6 +55,7 @@ const Calendar = () => {
 
         const calendar = [];
         let dayCounter = 1;
+        let workingDaysCount = 0;
 
         for (let i = 0; i < 6; i++) {
             const week = [];
@@ -61,15 +63,33 @@ const Calendar = () => {
                 if ((i === 0 && j < startDay) || dayCounter > daysInMonth) {
                     week.push(<td key={`${i}-${j}`}></td>);
                 } else {
-                    week.push(<td key={`${i}-${j}`}>{dayCounter}</td>);
+                    const currentDate = moment().year(selectedYear).month(selectedMonth - 1).date(dayCounter);
+                    const isWeekend = currentDate.day() === 0 || currentDate.day() === 6;
+                    const isExcludedDate = dayCounter % 2 === 0 && currentDate.day() === 6;
+                    if (!isWeekend || isExcludedDate) {
+                        week.push(<td key={`${i}-${j}`}>{dayCounter}</td>);
+                        console.log(dayCounter)
+                        workingDaysCount++;
+                    } else {
+                        week.push(<td key={`${i}-${j}`} className="weekend holiday">{dayCounter}</td>);
+                        console.log("holoday",dayCounter)
+                    }
                     dayCounter++;
                 }
             }
             calendar.push(<tr key={i}>{week}</tr>);
         }
 
-        return calendar;
+        return {
+            calendar,
+            workingDaysCount
+        };
     };
+
+    useEffect(() => {
+        const { workingDaysCount } = generateCalendar();
+        setTotalWorkingDays(workingDaysCount);
+    }, [selectedMonth, selectedYear]);
 
     return (
         <div className="alldiv">
@@ -92,8 +112,9 @@ const Calendar = () => {
                 {showResult && selectedMonth && selectedYear ? (
                     <div>
                         <label className="monthandyour">{`${getMonthName(selectedMonth)} ${selectedYear}`}</label><br></br>
-                        <label>Total Working Days:</label><br></br>
+                        <label>Total Working Days:{totalWorkingDays}</label><br></br>
                         <label>Total Present Days:</label><br></br>
+                        <label>leave Days:</label><br></br>
                         <div className="hintmange">
                             <div id="container1"></div>
                             <label>FullDay</label>
@@ -117,7 +138,7 @@ const Calendar = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {generateCalendar()}
+                            {generateCalendar().calendar}
                             </tbody>
                         </table>
                     </div>
