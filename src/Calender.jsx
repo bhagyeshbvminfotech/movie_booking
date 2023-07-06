@@ -28,6 +28,10 @@ const Calendar = () => {
     const [selectedYear, setSelectedYear] = useState(currentYear);
     const [showResult, setShowResult] = useState(false);
     const [totalWorkingDays, setTotalWorkingDays] = useState(0);
+    // const [Fullday,setFullday]=useState()
+    // const [Fullday,setFullday]=useState()
+    // const [Fullday,setFullday]=useState()
+    // const [Fullday,setFullday]=useState()
 
     const handleSearch = () => {
         setShowResult(true);

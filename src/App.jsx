@@ -9,6 +9,7 @@ import Login from "./Login";
 import SignIn from "./SignIn";
 import Not404 from "./Not404";
 import Calender from "./Calender";
+import DataAdd from "./DataAdd";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/login' element={<Login />} />
                     <Route path="/signup" element={<SignIn />} />
                     <Route path="/calender" element={<Calender />} />
+                    <Route path="/dataadd" element={<DataAdd />} />
                     <Route path="*" element={<Not404/>}/>
                 </Route>
             </Routes>

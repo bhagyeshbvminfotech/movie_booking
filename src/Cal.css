@@ -83,7 +83,8 @@ select {
 }
 
 .weekend.holiday {
-    color: red;
+    color: #000000;
+    background-color: #f0cfd2;
 }
 
 
