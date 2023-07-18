@@ -10,6 +10,8 @@ import SignIn from "./SignIn";
 import Not404 from "./Not404";
 import Calender from "./Calender";
 import DataAdd from "./DataAdd";
+import PureComponent from "./PureComponent";
+import Grouptest from "./Grouptest";
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
                     <Route path="/calender" element={<Calender />} />
                     <Route path="/dataadd" element={<DataAdd />} />
                     <Route path="*" element={<Not404/>}/>
+                    <Route path="/zzzz" element={<Grouptest/>}/>
+
                 </Route>
             </Routes>
         </BrowserRouter>

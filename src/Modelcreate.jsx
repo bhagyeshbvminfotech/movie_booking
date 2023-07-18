@@ -4,6 +4,8 @@ import './Modal.css';
 import AddIcon from '@mui/icons-material/Add';
 import { Dialog, DialogContent, DialogTitle, TextField } from '@mui/material';
 import axios from 'axios';
+import moment from 'moment';
+import Month from "./Month";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -66,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Modelcreate = () => {
     const classes = useStyles();
+    const [SelectedYear, setSelectedYear] = useState(moment().month() + 1);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [options, setOptions] = useState([]);
     const [newOption, setNewOption] = useState('');
@@ -77,14 +80,29 @@ const Modelcreate = () => {
     const [selectedAmount, setSelectedAmount] = useState('');
     const [selectedDescription, setSelectedDescription] = useState('');
     const [selectedDebit, setSelectedDebit] = useState('');
+    const currentYear = moment().year();
     const [alldata, setalldata] = useState([]);
+    const years = [];
+    const [selectedMonth, setSelectedMonth] = useState(moment().month() + 1);
+
+    console.log(alldata)
+    const handleMonthChange = (month) => {
+        setSelectedMonth(month);
+    };
 
 
+    for (let year = currentYear; year >= currentYear - 100; year--) {
+        years.push(year);
+    }
 
-
+    const renderYearOptions = () => {
+        return years.map((year) => (
+            <option key={year} value={year}>{year}</option>
+        ));
+    };
 
     const groupDataByDate = (data) => {
-  const groupedData = {};
+            const groupedData = {};
 
 
         for (let i = 0; i < data.length; i++) {
@@ -102,6 +120,7 @@ const Modelcreate = () => {
 
     const groupedData = groupDataByDate(alldata);
 
+    console.log(alldata)
 
 
 
@@ -139,6 +158,7 @@ const Modelcreate = () => {
             .catch((error) => {
                 console.error('Error retrieving data:', error);
             });
+
     };
 
     const fetchData2 = () => {
@@ -294,6 +314,7 @@ const Modelcreate = () => {
                     setSelectedAmount('')
                     setSelectedDescription('')
                     setSelectedDebit('')
+                fetchData3()
             })
             .catch((error) => {
                 console.error('Error saving data:', error);
@@ -302,12 +323,25 @@ const Modelcreate = () => {
 
     };
 
+    const handleYearChange = (e) => {
+        setSelectedYear(e.target.value);
+
+    };
+
+
 
     return (
-        <div>
+        <div className="divcomponent">
             <button className="create-button" onClick={openModal}>
                 Create
             </button>
+            <Month onMonthChange={handleMonthChange} />
+            <select
+                value={SelectedYear}
+                onChange={handleYearChange}
+            >
+                {renderYearOptions()}
+            </select>
             {isModalOpen && (
                 <div className={classes.modal}>
                     <div className={classes.modalContent}>

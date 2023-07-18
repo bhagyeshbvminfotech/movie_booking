@@ -1,3 +1,14 @@
+body{
+    margin: 18px;
+}
+
+.divcomponent{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .create-button {
     background-color: #19a90f;
     color: #fff;
